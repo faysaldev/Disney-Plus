@@ -1,0 +1,172 @@
+main {
+    background-color: aqua;
+    position: relative;
+    min-height: calc(100vh - 250px);
+    top: 72px;
+    display: block;
+    overflow-x: hidden;
+    padding: 0 10px;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+ /* ==============slider css start===================== */
+.carousal{
+    margin-top: 20px;
+}
+.slick-arrow{
+    opacity: 0;
+    height: 100%;
+    width: 10vw;
+    z-index: 1;
+}
+.slick-arrow:hover{
+    opacity: 1;
+    transition: .3s;
+}
+.carousal ul li button::before{
+    font-size: 10px;
+    color:rgb(250, 158, 171);
+}
+li.slick-active::before{
+    color: white !important;
+}
+.slick-list{
+    overflow: initial;
+}
+.slick-prev{
+    left: -75px;
+}
+
+.slick-next{
+    right: -75px;
+}
+
+
+.signleimg__wrap{
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.signleimg__wrap a{
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 10px black;
+    position: relative;
+}
+.signleimg__wrap a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.signleimg__wrap a img:hover{
+    border: 4px solid rgba(240, 249, 249, 0.8);
+    transition: .3s;
+}
+ /* ==============slider css end===================== */
+
+ /* ===============viewers css start================= */
+
+ .viewers {
+    display: grid;
+    margin-top: 10px;
+    padding: 30px 0 25px;
+    grid-gap: 25px;
+    gap: 25px;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.single__viewer{
+    padding-top: 56.25%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px 2px #00000094;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid rgba(249, 249, 249, 0.1);
+}
+
+.single__viewer img{
+    inset: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    display: block;
+    z-index: 10000000000000;
+    top: 0;
+}
+
+.single__viewer video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    opacity: 0;
+}
+.single__viewer:hover{
+    border: 3px solid rgb(255, 255, 255);
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+.single__viewer:hover video{
+    opacity: 1;
+    z-index: 1000;
+    transition: 0.5s;
+    transform: scale(1.3);
+}
+
+@media (max-width: 768px){
+    .viewers{
+        grid-template-columns: 1fr;
+    }
+    .content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+ /* ===============viewers css end================= */
+
+
+ /* ================Recommend================= */
+ .recommend,
+ .disney,
+ .foryou{
+     padding: 0 0 26px;
+ }
+ .content{
+    display: grid;
+    grid-gap: 25px;
+    gap: 25px;
+    padding-top: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+ }
+ @media (max-width: 768px){
+    .content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+ .single__recommend{
+    padding-top: 56.25%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px 2px #00000094;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgba(211, 211, 211, 0.158);
+ }
+ .single__recommend img{
+     width: 100%;
+     height: 100%;
+     inset: 0px;
+     top: 0;
+     position: absolute;
+     display: block;
+     object-fit: cover;
+}
+.single__recommend:hover{
+    transition: 0.3s;
+    transform: scale(1.07);
+    border-color: rgba(249, 249, 249, 0.8);
+}
